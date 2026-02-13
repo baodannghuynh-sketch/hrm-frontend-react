@@ -33,7 +33,7 @@ function Sidebar() {
           className="block p-3 rounded-lg hover:bg-red-600 w-full text-left mt-10"
           onClick={() => {
             localStorage.removeItem("isLogin");
-            window.location.href = "/";
+            window.location.href = "/login";
           }}
         >
           Logout

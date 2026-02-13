@@ -14,7 +14,9 @@ import Profile from "./pages/Profile";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<Profile />} />
+      <Route path="/login" element={<Login />} />
+
 
       <Route
         path="/dashboard"
