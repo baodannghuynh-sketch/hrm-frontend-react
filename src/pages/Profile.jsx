@@ -49,7 +49,12 @@ function Profile() {
           <p>Email: baodan.nghuynh@gmail.com</p>
           <p>GitHub: https://github.com/baodannghuynh-sketch/hrm-frontend-react.git</p>
         </div>
-      </div>
+    </div>
+        <p className="text-sm text-gray-500">
+        Demo account: admin@gmail.com / 123456
+        </p>
+
+      
     </MainLayout>
   );
 }
