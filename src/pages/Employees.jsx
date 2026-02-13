@@ -5,10 +5,35 @@ function Employees() {
   const [employees, setEmployees] = useState([]);
 
   // load dữ liệu khi vào trang
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("employees")) || [];
-    setEmployees(data);
-  }, []);
+useEffect(() => {
+  let data = JSON.parse(localStorage.getItem("employees"));
+
+  // nếu chưa có dữ liệu → tạo dữ liệu mẫu
+  if (!data) {
+    data = [
+      {
+        name: "Nguyen Van A",
+        email: "vana@gmail.com",
+        position: "Frontend Developer",
+      },
+      {
+        name: "Tran Thi B",
+        email: "thib@gmail.com",
+        position: "UI/UX Designer",
+      },
+      {
+        name: "Le Van C",
+        email: "vanc@gmail.com",
+        position: "Backend Developer",
+      },
+    ];
+
+    localStorage.setItem("employees", JSON.stringify(data));
+  }
+
+  setEmployees(data);
+}, []);
+
 
   // xóa nhân viên
   const deleteEmployee = (index) => {
