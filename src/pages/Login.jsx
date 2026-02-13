@@ -47,6 +47,7 @@ function Login() {
         </form>
 
         <p className="text-slate-400 text-sm mt-4 text-center">
+          Demo account: <br />
           Email: admin@gmail.com <br />
           Password: 123456
         </p>
